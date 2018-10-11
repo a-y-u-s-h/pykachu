@@ -1,0 +1,42 @@
+- api:
+  - native:
+
+  - web:
+
+- data:
+  - api:
+
+  - automation:
+
+  - core:
+
+  - dependencies:
+
+  - logs:
+
+
+- src:
+  - automation:
+    - generators:
+
+    - cleaners:
+
+    - deployers:
+
+    - docker:
+
+  - core:
+    - classes:
+
+    - engines:
+
+    - functions:
+
+    - scripts:
+
+  - dependencies:
+
+  - tests:
+
+- README.md
+- main.py
