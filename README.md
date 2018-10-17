@@ -1,6 +1,6 @@
 ## Pykachu
 
-An opinionated, but configurable project generator for python projects.
+A universal and configurable project generator written in python.
 
 ```
 .
