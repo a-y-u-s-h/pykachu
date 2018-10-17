@@ -1,6 +1,6 @@
 ## Pykachu
 
-An opinionated project generator for python projects.
+An opinionated, but configurable project generator for python projects.
 
 ```
 .

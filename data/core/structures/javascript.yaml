@@ -1,0 +1,50 @@
+structure:
+  - api:
+    - native:
+
+    - web:
+
+  - data:
+    - api:
+
+    - automation:
+
+    - core:
+
+    - dependencies:
+
+    - logs:
+
+
+  - docs:
+    - api:
+
+    - contribution:
+
+
+  - src:
+    - automation:
+      - generators:
+
+      - cleaners:
+
+      - deployers:
+
+      - docker:
+
+    - core:
+      - classes:
+
+      - engines:
+
+      - functions:
+
+      - scripts:
+
+    - dependencies:
+
+    - tests:
+
+  - README.md
+  - index.js
+  - Dockerfile

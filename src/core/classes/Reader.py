@@ -36,6 +36,10 @@ class Reader(object):
     -------------------------------------  
     """
     output = []
+
+    if os.path.exists(self.root):
+      os.chdir(self.root)
+
     if os.path.exists(self.look):
       os.chdir(self.look)
       for path, folders, files in os.walk(self.look):

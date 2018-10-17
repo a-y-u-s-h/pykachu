@@ -11,6 +11,7 @@
 # |~~~~~~/|\~~~~~~/|\~~~~~~/|\~~~~~~/|\~~~~~~/|\~~~~~~/|\~~~~~~/|\~~~~~~~| #
 # |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~| #
 
+import os
 import sys
 
 from src.automation.cleaners.remove import remove
@@ -34,9 +35,14 @@ def main():
   if "--remove" in sys.argv:
     remove()
   
-  elif ("use" in sys.argv) and (len(sys.argv) > sys.argv.index("use") + 1):
-    project = sys.argv[sys.argv.index("use") + 1]
-    structure(project)
+  elif ("create" in sys.argv) and (len(sys.argv) > sys.argv.index("create") + 1):
+    project = sys.argv[sys.argv.index("create") + 1]
+    lang = "python"
+    
+    if ("for" in sys.argv) and (len(sys.argv) > sys.argv.index("for") + 1):
+      lang = sys.argv[sys.argv.index("for") + 1]
+
+    structure(name = project, lang = f"{lang}")
 
 if __name__ == '__main__':
   main()

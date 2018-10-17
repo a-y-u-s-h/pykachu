@@ -1,3 +1,5 @@
+from src.core.functions.shell import *
+
 class Generator(object):
   """
   Description:
@@ -28,7 +30,10 @@ class Generator(object):
     -------------------------------------  
     """
     if (src != "") and (name != "") and (what == "structure"):
+      pwd = os.path.abspath(os.getcwd())
+      take(name)
       self.structure(src)
+      cd(pwd)
 
   # <---------------------------->
   
@@ -51,4 +56,21 @@ class Generator(object):
       
     -------------------------------------  
     """
-    pass
+    for i in yaml:
+      if type(i) is dict:
+        for key, value in i.items():
+          if value is not None:
+            pwd = os.path.abspath(os.getcwd())
+            take(key)
+            self.structure(value)
+            cd(pwd)
+          else:
+            mkdir(key)
+      if type(i) is list:
+        for item in i:
+          pwd = os.path.abspath(os.getcwd())
+          self.structure(item)
+          cd(pwd)
+      if type(i) is str:
+        touch(i)
+          
